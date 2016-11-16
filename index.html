@@ -2,15 +2,77 @@
 <html>
 
 <head>
-    <title>Star Wars RPG</title>
+    <title>Dino Wars RPG</title>
+    <link href="https://fonts.googleapis.com/css?family=Krona+One" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 
 <body>
-    
+    <div class="container">
+        <div class="attackArea">
+            <p class="chooseDino">Choose your Dino!</p>
+        </div>
+        <div class="middle">
+            <div class="char" name="T-Rex" atk="6" cntAtk="70" HP="200">
+                <img class="dinoImage" src="assets/images/trex.png">
+                <div class="statsBox">
+                    <h2>T-Rex</h2>
+                    <div class="hpBox"><span>HP: <span class = "hp">155</span></span>
+                    </div>
+                    <div class="attackBox"><span>Attack: <span class = "attack">6</span></span>
+                    </div>
+                    <div class="counterBox"><span>Counter Attack: <span class="counterAttack">10</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="char" name="Velociraptor" atk="10" cntAtk="24" HP="120">
+                <img class="dinoImage" src="assets/images/velociraptor.png">
+                <div class="statsBox">
+                    <h2>Velociraptor</h2>
+                    <div class="hpBox"><span>HP: <span class = "hp">115</span></span>
+                    </div>
+                    <div class="attackBox"><span>Attack: <span class = "attack">10</span></span>
+                    </div>
+                    <div class="counterBox"><span>Counter Attack: <span class="counterAttack">18</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="char" name="Gallimimus" atk="12" cntAtk="36" HP="80">
+                <img class="dinoImage" src="assets/images/gallimimus.png">
+                <div class="statsBox">
+                    <h2>Gallimimus</h2>
+                    <div class="hpBox"><span>HP: <span class = "hp">130</span></span>
+                    </div>
+                    <div class="attackBox"><span>Attack: <span class = "attack">12</span></span>
+                    </div>
+                    <div class="counterBox"><span>Counter Attack: <span class="counterAttack">8</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="char" name="Triceratops" atk="8" cntAtk="50" HP="150">
+                <img class="dinoImage" src="assets/images/tric.png">
+                <div class="statsBox">
+                    <h2>Triceratops</h2>
+                    <div class="hpBox"><span>HP: <span class = "hp">135</span></span>
+                    </div>
+                    <div class="attackBox"><span>Attack: <span class = "attack">8</span></span>
+                    </div>
+                    <div class="counterBox"><span>Counter Attack: <span class="counterAttack">20</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="attackButton"><p>CLICK TO</p> <p>ATTACK!</p></div>
+            <div class="infoBox">
+                <p class="winLose">You win</p>
+            </div>
+        </div>
+        <div class="defendArea"></div>
+    </div>
 </body>
 <script type="text/javascript" src="assets/javascript/game.js"></script>
 
