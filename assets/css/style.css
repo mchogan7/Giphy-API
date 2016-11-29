@@ -1,236 +1,174 @@
-body {
-    background-color: #2C3E50;
-    background-image: url('#Triangle');
+html {
+    background-color: #363F45;
 }
 
-ol {
-    list-style-position: inside;
-    column-count: 2;
-    column-gap: 20px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    margin-left: 20px;
-    color: #2C3E50;
-}
-
-.container {
-    background-color: #ECF0F1 !important;
-    margin: auto;
-    width: 66%;
-    min-height: 100vh;
-    background-color: gray;
-    padding: 25px;
-}
-
-.timer {
-    background-color: #2980B9 !important;
-    height: 100px;
-    width: 80px;
-    position: relative;
-    top: -150px;
-    margin: auto;
-    text-align: center;
-    color: white;
-    background-color: black;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 100px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 2px 3px 5px 2px #ccc;
-}
-
-.question {
-    color: #2C3E50;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-    font-size: 30px;
-    margin-bottom: 10px;
+.ratingBar {
+    font-family: 'Montserrat', sans-serif;
+    height: 40px;
+    background-color: rgba(255, 255, 255, .35);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-transform: uppercase;
     line-height: 40px;
-}
-
-.answer {
-    color: #2C3E50;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
-}
-
-.answer:hover {
-    animation-name: answerHover;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-}
-
-li {
-    -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
+    padding-left: 15px;
+    text-align: left;
+    box-sizing: border-box;
     break-inside: avoid;
 }
 
-li:hover {
-    animation-name: answerHover;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
+.gifContainer {
+    position: relative;
+    padding-top: 15px;
+    box-sizing: border-box;
+    break-inside: avoid;
 }
 
-.toStart {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-    font-size: 30px;
-    margin-bottom: 10px;
-    line-height: 40px;
-    text-align: center;
-    color: #3498DB;
-}
-
-.final {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 50px;
-    text-align: center;
-    border-bottom: 1px;
-    border-style: solid;
-    border-color: #dadada;
-    height: 50px;
-    margin: auto;
-    color: #2980B9;
+.gif {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    break-inside: avoid;
 }
 
 .button {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    height: 50px;
-    line-height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
     text-align: center;
-    height: 50px;
-    width: 200px;
-    color: #2980B9;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #2980B9;
-    margin: auto;
-    margin-top: 25px;
+    background-color: #FEB41C;
+    color: #363F45;
+    margin: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
     cursor: pointer;
+    opacity: .7;
+    transition: opacity 0.3s ease;
 }
 
 .button:hover {
-    animation-name: buttonHover;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
+    opacity: 1;
 }
 
-input {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    height: 40px;
-    line-height: 20px;
+.errorMessage {
+    margin-top: 15%;
     text-align: center;
-    width: 100%;
-    color: #2C3E50;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #2980B9;
-    margin: auto;
-    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    color: #FEB41C;
 }
 
-*:focus {
+.active {
+    opacity: 1;
+}
+
+.search {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    width: 400px;
+    height: 40px;
+    box-sizing: border-box;
+    border-style: none;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.searchBar {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.submit {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block;
+    background-color: #FEB41C;
+    color: #363F45;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.submit:hover {
+    color: #5E7C88;
+}
+
+input:focus {
     outline: none;
 }
 
-.red {
-    color: #E74C3C;
-}
-
-.redTimer {
-    background-color: #E74C3C !important;
-}
-
-.timerUp {
-    animation-name: slideDown;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    top: -25px;
-}
-
-.timerDown {
-    animation-name: slideUp;
-    animation-duration: 1s;
-    top: -150px;
-}
-
-.title {
-    font-weight: 700;
-    font-size: 8vmin;
-    margin-bottom: 40px;
-}
-
-.formHeader {
-    font-size: 20px;
-    margin-top: 15px;
-}
-
-.addMore {
+.buttonArea {
     text-align: center;
-    font-size: 20px;
-    margin-top: 0px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    width: 100%;
-    background-color: #2980B9;
-    height: 30px;
-    color: white;
-    line-height: 30px;
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-@keyframes slideDown {
+.gifArea {
+    padding-left: 15px;
+    padding-right: 15px;
+    columns: 2;
+    padding-bottom: 15px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.glowRed {
+    color: #363F45;
+    animation-name: strobe;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes strobe {
     0% {
-        top: -150px;
+        color: #363F45;
+    }
+    50% {
+        color: red;
     }
     100% {
-        top: -25px;
+        color: #363F45;
     }
 }
 
-@keyframes slideUp {
-    0% {
-        top: -25px;
+@media only all and (max-width: 640px) {
+    .gifArea {
+        padding-left: 15px;
+        padding-right: 15px;
+        columns: 1;
     }
-    100% {
-        top: -150px;
-    }
+
+    .searchBar {
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-top: 15px;
+   margin-bottom: 20px;
 }
 
-@keyframes buttonHover {
-    from {
-        background-color: rgba(52, 152, 219, 0);
-    }
-    to {
-        background-color: rgba(52, 152, 219, 1);
-        color: white;
-    }
-}
+	.search {
+		padding: 0px;
+		width: 100%;
+		text-align: center;
+	}
 
-@keyframes answerHover {
-    from {
-        color: #2C3E50;
-    }
-    to {
-        color: #2980B9;
-    }
-}
+	.submit {
+		margin-top: 2px;
+		display: inline-block;
+		width: 100%;
+		padding: 0px;
+	}
 
-@keyframes growDown {
-    from {
-        height: 0px;
-    }
-    to {
-        height: 40px;
-    }
+	.errorMessage {
+		font-size: 30px;
+		padding: 15px;
+	}
 }
