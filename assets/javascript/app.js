@@ -25,7 +25,7 @@ function buttonMaker() {
 function giphyRequest() {
 
 //Sets the search target.
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + searchTopic + "&limit=10&api_key=dc6zaTOxFJmzC";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchTopic + "&limit=10&api_key=dc6zaTOxFJmzC";
 
 //Calls for the JSON object and clears the GIF area.
     $.ajax({ url: queryURL, method: "GET" }).done(function(response) {
