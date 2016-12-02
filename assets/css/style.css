@@ -77,9 +77,24 @@ html {
 
 .searchBar {
     font-family: 'Montserrat', sans-serif;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 40px;
     margin-bottom: 40px;
     text-align: center;
+}
+
+.searchIcon {
+    padding-left: 10px;
+    background-color: white;
+    line-height: 39px;
+    padding-bottom: 1px;
+}
+
+.searchContainer{
+    background-color: white;
+    width: 400px;
+    display: inline-block;
 }
 
 .submit {
@@ -154,9 +169,13 @@ input:focus {
    margin-bottom: 20px;
 }
 
+.searchIcon {
+    width: 10%;
+    padding-left: 0px;
+}
 	.search {
+        width: 90%;
 		padding: 0px;
-		width: 100%;
 		text-align: center;
 	}
 
